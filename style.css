@@ -16,4 +16,18 @@ body
 #buttons button
 {
 	width:24%;
+	background: #081020;
+	border: none;
+	padding: 10px 0px;	
+}
+
+#buttons button img
+{
+	height: 48px;
+	width: 48px;
+}
+
+#buttons button:hover
+{
+	background: #101828;
 }
