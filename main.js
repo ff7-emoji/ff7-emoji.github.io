@@ -3,7 +3,7 @@ page = 0;
 
 function load(p) {
 	var url = window.location.href.split('?')[0];
-	window.history.pushState({page:p}, "spacegirlflowersbike.city "+p, url+"?"+p);
+	window.history.pushState({page:p}, "space-girl-flowers-bike.city "+p, url+"?"+p);
 	open(p);
 }
 
