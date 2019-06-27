@@ -1,28 +1,34 @@
 pages = [];
 page = 0;
 
+function load(p) {
+	var url = window.location.href.split('?')[0];
+	window.history.pushState({page:p}, "spacegirlflowersbike.city "+p, url+"?"+p);
+	open(p);
+}
+
 function open(p) {
 	page = p;
-	main.innerHTML = twemoji.parse(pages[p].trim());	
-	pagenumber.innerHTML = p+'/'+pages.length;
+	main.innerHTML = twemoji.parse(pages[p-1].trim());	
+	pagenumber.innerHTML = p+'/'+(pages.length-1);
 }
 
 function next() {
-	if(page < pages.length-1)
-		open(page+1);
+	if(page < pages.length)
+		load(page+1);
 }
 
 function back() {
-	if(page > 0)
-		open(page-1);
+	if(page > 1)
+		load(page-1);
 }
 
 function end() {
-	open(pages.length-1);
+	load(pages.length-1);
 }
 
 function begin() {
-	open(0);
+	load(1);
 }
 
 function run() {
@@ -31,5 +37,10 @@ function run() {
 	btn_back.onclick = back;	
 	btn_next.onclick = next;
 	btn_end.onclick = end;
-	open(0);
+
+	var p = parseInt(location.search.substr(1));
+	if(isNaN(p))
+		p = 1;
+
+	open(p);
 }
