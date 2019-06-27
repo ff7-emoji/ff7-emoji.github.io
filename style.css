@@ -1,0 +1,19 @@
+body
+{
+	width: 900px;
+	margin: auto;
+	margin-top: 100px;
+	background: #142233;	
+	color: white;
+}
+
+#main
+{
+	min-height: 320px;
+	font-size: 72px;
+}
+
+#buttons button
+{
+	width:24%;
+}
