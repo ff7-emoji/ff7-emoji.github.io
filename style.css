@@ -9,9 +9,10 @@ body
 
 #main
 {
-	min-height: 320px;
+	min-height: 336px;
 	font-size: 72px;
 	margin-bottom: 20px;
+	white-space: pre;
 }
 
 img.emoji
