@@ -11,6 +11,15 @@ body
 {
 	min-height: 320px;
 	font-size: 72px;
+	margin-bottom: 20px;
+}
+
+img.emoji
+{
+	width:72px;
+	height:72px;
+	font-size:0;
+	vertical-align: -16px;
 }
 
 #buttons button
